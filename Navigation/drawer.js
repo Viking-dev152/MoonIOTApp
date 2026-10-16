@@ -1,7 +1,7 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { MaterialIcons } from '@expo/vector-icons';
-import { Home } from '../Screens/Home';
-import { Settings } from '../Screens/Settings';
+import  Home  from '../Screens/Home';
+import  Settings  from '../Screens/Settings';
 import CustomDrawer from '../Components/CustomDrawer';
 
 const DrawerNavigator = createDrawerNavigator();

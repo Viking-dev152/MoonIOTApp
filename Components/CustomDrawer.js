@@ -11,7 +11,7 @@ import {
   DrawerItemList,
 } from '@react-navigation/drawer';
 
-import {IonIcons, MaterialIcons} from '@expo/vector-icons';
+import {Ionicons, MaterialIcons} from '@expo/vector-icons';
 
 export default function CustomDrawer(props) {
 
@@ -26,7 +26,7 @@ export default function CustomDrawer(props) {
 
             <TouchableOpacity style = {styles.closeButton} onPress = {() => props.navigation.closeDrawer()}>
 
-                <IonIcons name = "arrow-back-outline" size = {30} color = 'white' />
+                <Ionicons name = "arrow-back-outline" size = {30} color = 'white' />
 
             </TouchableOpacity>
 
