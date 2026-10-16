@@ -9,8 +9,8 @@ const {height, width} = Dimensions.get("window")
 
 export default function Login(props) {
 
-  const [username, setUsername] = useState({value:'vibhas.msjcr03104', error:''});
-  const [password, setPassword] = useState({value:'Ggbank@27', error:''});
+  const [username, setUsername] = useState({value:'anurag.mscint230301001', error:''});
+  const [password, setPassword] = useState({value:'an@12345', error:''});
 
   const handleLogin = async() => {
 
@@ -24,10 +24,10 @@ export default function Login(props) {
 
         body: JSON.stringify({
 
-          username: username.value,
+          userName: username.value,
           password: password.value,
 
-          IPAddress: '127.0.0.1',
+          iPAddress: '127.0.0.1',
 
           rememberMe: true
 
@@ -44,7 +44,7 @@ export default function Login(props) {
 
       const result = await response.json();
 
-      if (result.statusCode === 200 & result.length>0){
+      if (result.statusCode === 200 && result.length>0){
 
         await AsyncStorage.setItem('loginresponse', JSON.stringify(result));
         console.log(result);
@@ -82,7 +82,7 @@ export default function Login(props) {
 
       <View style  ={styles.formContainer}>
 
-        <TextInput placeholder='Email' value = {username.value} onChangeText={(text) => setUsername({value: Text, error:''})} error = {!!username.error} errorText = {username.error} keyboardType='email-address' style = {styles.input}/>
+        <TextInput placeholder='Email' value = {username.value} onChangeText={(text) => setUsername({value: text, error:''})} error = {!!username.error} errorText = {username.error} keyboardType='email-address' style = {styles.input}/>
         <TextInput placeholder='Password' keyboardType='email-address' value={password.value} onChangeText={(text) => setPassword({value: text, error:''})} error = {!!password.error} errorText = {password.error} secureTextEntry={true} style = {styles.input}/>
       
       </View>
